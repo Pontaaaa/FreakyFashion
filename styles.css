@@ -2,19 +2,20 @@ body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .header-container {
     display: flex;
     align-items: center;
     margin: 20px;
+    max-width: 100%;
 }
 
 .search-bar {
     position: relative;
     width: 100%;
     max-width: 300px;
-    margin: 0px 0;
     margin-left: 20px;
 }
 
@@ -24,7 +25,6 @@ body {
     border-radius: 25px;
     border: 2px solid #ccc;
     font-size: 16px;
-    box-sizing: border-box;
 }
 
 .search-bar .fa-search {
@@ -42,6 +42,7 @@ body {
     background-color: turquoise;
     width: 100%;
     border: 1px gray solid;
+    box-sizing: border-box;
 }
 
 .categories h2 {
@@ -54,6 +55,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: row-reverse;
+    width: 100%;
 }
 
 .hero-conatiner,
@@ -61,6 +63,7 @@ body {
     flex: 1;
     margin: 0px 0px 5px 5px;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .hero-conatiner {
@@ -111,6 +114,7 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
+    width: 100%;
 }
 
 .shopping-container {
@@ -123,8 +127,8 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
-    display: block;
 }
+
 .shopping-info {
     display: flex;
     justify-content: space-between;
@@ -141,16 +145,17 @@ body {
     font-size: 18px;
     font-weight: bold;
     white-space: nowrap;
-    margin-top:-4px;
-    margin-right: 12px;
+    margin-top: 4px;
+    margin-right: 0px;
 }
 
 .shopping-brand {
     font-size: 14px;
     color: gray;
     margin-top: 5px;
-    margin-left:4px;
+    margin-left: 4px;
 }
+
 .features-grid {
     display: flex;
     flex-wrap: wrap;
@@ -158,13 +163,14 @@ body {
     align-items: flex-start;
     padding: 20px 0;
     margin-top: 20px;
+    width: 100%;
 }
 
 .feature-item {
     display: flex;
-    flex-direction: center;
-    align-items: left;
-    padding-left: 10px 0;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
 }
 
 .feature-item i {
@@ -183,12 +189,13 @@ footer {
     background-color: #f9f9f9;
     padding: 20px;
     border: 1px solid gray;
-    box-sizing: border-box;
+    width: 100%;
 }
+
 .footer-container {
-    display: flex; 
+    display: flex;
     flex-direction: row;
-    padding: 0px 0px 0px 0px;
+    padding: 0;
 }
 
 .footer-section {
@@ -219,13 +226,65 @@ footer {
     font-size: 14px;
     margin: 0;
 }
+.accordion {
+    width: 97%;
+    max-width: 600px;
+    margin: 20px 0px 0px -12px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .accordion-header {
+    display: block;
+    padding: 15px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background-color: lightgrey;
+  }
+  
+  .accordion-toggle {
+    display: none;
+  }
+  
+  .accordion-content {
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .accordion-content p {
+    margin: 15px;
+  }
 
+  .accordion-content ul {
+    list-style-type: none;
+    }
+  
+  .accordion-toggle:checked + .accordion-header + .accordion-content {
+    max-height: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 
 @media (min-width: 1024px) {
     .image-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 5px;
+        width: 100%;
     }
 
     .image-container {
@@ -252,9 +311,12 @@ footer {
         width: 80%;
         border-radius: 5px;
     }
+
     .shopping-grid {
         grid-template-columns: repeat(4, 1fr);
+        width: 100%;
     }
+
     .features-grid {
         flex-direction: row;
         justify-content: space-between;
@@ -264,6 +326,7 @@ footer {
         margin: 15px;
     }
 }
+
 @media (max-width: 768px) {
     .hero {
         width: 100%;
@@ -281,26 +344,35 @@ footer {
         width: 100%;
         margin: 0;
     }
-    .hero img,
-    .hero h3 h2 {
-        max-width: 100%;
-    }
+
     .shopping-grid {
         grid-template-columns: repeat(2, 1fr);
+        width: 100%;
     }
+
     .features-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         margin: 15px;
     }
-    .feature-item {
-        justify-content: flex-start;
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
-@media (min-width:640px) {
-    .shopping-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+@media (min-width: 641px) {
+    .accordion {
+        display: none;
+    }
+}
+
+@media (max-width: 641px) {
+    .footer-container {
+        display: none;
+        width: 100%;
     }
 }
 
@@ -327,9 +399,12 @@ footer {
     .categories h2 {
         margin: 12px 6px;
     }
+
     .shopping-grid {
         grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
+
     .shopping-info {
         flex-direction: column;
         align-items: flex-start;
@@ -339,18 +414,21 @@ footer {
         margin-left: 0;
         margin-top: 10px;
     }
+
     .features-grid {
         grid-template-columns: repeat(1, 1fr);
-        margin: 0px 15px;
+        margin: 0 15px;
     }
+
     .feature-item {
         width: 100%;
-        margin: 0px 0px 0px 0px;
     }
+
     .footer-container {
         flex-direction: column;
         align-items: flex-start;
     }
+
     footer {
         border: none;
         background-color: white;
