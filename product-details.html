@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freaky Fashion</title> /* bytas ut till logo */
+    <title>Freaky Fashion</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="header-container">
-    <h1>Freaky Fashion</h1>
+    <img class="logo" src="FR.PNG" alt="Freaky Fashion">
     <div class="search-bar">
         <form action="/search" method="get">
             <input type="text" class="search-box" name="query" placeholder=" Sök produkt">
             <i class="fas fa-search"></i>
         </form>
     </div>
+    </div>
+    <div class="icons">
+        <a href=""><i class="fas fa-heart"></i></a>
+        <a href=""><i class="fas fa-shopping-basket"></i></a>
     </div>
     <div class="categories">
     <h2>NYHETER</h2>
@@ -24,5 +28,159 @@
     <h2>REA</h2>
     <h2>KAMPANJER</h2>
     </div>
+
+    <div class="product-container">
+        <div class="image-container">
+            <img src="white-tshirt-design_1409-4419.jpg" alt="T-Shirt">
+        </div>
+        <div class="product-details">
+            <h2>T-Shirt</h2>
+            <p class="brand">Levis</p>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p class="price">199 SEK</p>
+            <button class="add-to-cart">Lägg i varukorg</button>
+        </div>
+    </div>
+
+    <div class="shopping-grid, product-rows">
+    <div class="shopping-container-small">
+        <a href="#"><img src="white-tshirt-design_1409-4419.jpg" alt="T-Shirt"></a>
+        <i class="fa-regular fa-heart"></i>
+        <div class="shopping-info">
+            <div class="shopping-text">
+                <p>T-Shirt</p>
+                <p class="shopping-brand">Levis</p>
+            </div>
+            <div class="shopping-price">
+                <p>199 kr</p>
+            </div>
+        </div>
+    </div>
+    <div class="shopping-container">
+        <a href="#"><img src="white-tshirt-design_1409-4419.jpg" alt="T-Shirt"></a>
+        <i class="fa-regular fa-heart"></i>
+        <div class="shopping-info">
+            <div class="shopping-text">
+                <p>T-Shirt</p>
+                <p class="shopping-brand">Levis</p>
+            </div>
+            <div class="shopping-price">
+                <p>199 kr</p>
+            </div>
+        </div>
+    </div>
+    <div class="shopping-container">
+        <a href="#"><img src="white-tshirt-design_1409-4419.jpg" alt="T-Shirt"></a>
+        <i class="fa-regular fa-heart"></i>
+        <div class="shopping-info">
+            <div class="shopping-text">
+                <p>T-Shirt</p>
+                <p class="shopping-brand">Levis</p>
+            </div>
+            <div class="shopping-price">
+                <p>199 kr</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="features-grid">
+        <div class="feature-item">
+            <i class="fa-solid fa-earth-americas"></i>
+            <p class="feature-text">Free Shipping</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-jet-fighter"></i>
+            <p class="feature-text">Express Shipping</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-shield-virus"></i>
+            <p class="feature-text">Safe Transactions</p>
+        </div>
+        <div class="feature-item">
+            <i class="fa-regular fa-face-smile"></i>
+            <p class="feature-text">New Products Daily</p>
+        </div>
+    </div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Shopping</h3>
+            <ul>
+                <li>Vinterjackor</li>
+                <br>
+                <li>Pufferjackor</li>
+                <br>
+                <li>Kappa</li>
+                <br>
+                <li>Trenchcoats</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Mina Sidor</h3>
+            <ul>
+                <li>Mina Ordrar</li>
+                <br>
+                <li>Mitt Konto</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Kundtjänst</h3>
+            <ul>
+                <li>Returnpolicy</li>
+                <br>
+                <li>Integritetspolicy</li>
+            </ul>
+        </div>
+    </div>
+    <div class="accordion">
+        <div class="accordion-item">
+          <input type="checkbox" id="accordion1" class="accordion-toggle">
+          <label for="accordion1" class="accordion-header">Shopping</label>
+          <div class="accordion-content">
+           <ul>
+            <li>Vinterjackor</li>
+            <br>
+            <li>Pufferjackor</li>
+            <br>
+            <li>Kappa</li>
+            <br>
+            <li>Trenchcoats</li>
+           </ul>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <input type="checkbox" id="accordion2" class="accordion-toggle">
+          <label for="accordion2" class="accordion-header">Mina Sidor</label>
+          <div class="accordion-content">
+            <ul>
+                <li>Mina Ordrar</li>
+                <br>
+                <li>Mitt Konto</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <input type="checkbox" id="accordion3" class="accordion-toggle">
+          <label for="accordion3" class="accordion-header">Kundtjänst</label>
+          <div class="accordion-content">
+            <ul>
+                <li>Returnpolicy</li>
+                <br>
+                <li>Integritetspolicy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Freaky Fashion</p>
+    </div>
+</footer>
 </body>
 </html>
